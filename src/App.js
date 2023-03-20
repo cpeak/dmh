@@ -40,6 +40,22 @@ function App() {
       cha: 12,
     },
     {
+      id: '5',
+      npc: true,
+      name: "Goblin",
+      pc: "X",
+      level: 1,
+      hp: 7,
+      ac: 15,
+      pp: 9,
+      str: 8,
+      dex: 14,
+      const: 10,
+      int: 10,
+      wis: 8,
+      cha: 8,
+    },
+    {
       id: '3',
       npc: true,
       name: "Goblin",
@@ -54,17 +70,49 @@ function App() {
       int: 10,
       wis: 8,
       cha: 8,
-    }
+    },
+    {
+      id: '4',
+      npc: true,
+      name: "Bugbear",
+      pc: "X",
+      level: 1,
+      hp: 27,
+      ac: 16,
+      pp: 10,
+      str: 15,
+      dex: 14,
+      const: 13,
+      int: 8,
+      wis: 11,
+      cha: 9,
+    },
+    {
+      id: '6',
+      npc: true,
+      name: "Goblin",
+      pc: "X",
+      level: 1,
+      hp: 7,
+      ac: 15,
+      pp: 9,
+      str: 8,
+      dex: 14,
+      const: 10,
+      int: 10,
+      wis: 8,
+      cha: 8,
+    },
   ]);
 
 
   return (
-    <div className="App">
-      <header className="p-5 bg-black text-white">
+    <div className="">
+      <header className="fixed left-0 right-0 p-5 bg-black text-white">
         <img src={logo} className="w-20" alt='logo'/>
       </header>
-      <main className="p-4 grid grid-cols-2 gap-8">
-        <section className="grid gap-4">
+      <main className="p-4 grid grid-cols-2 gap-8 pt-24 bg-gray-200 h-screen overflow-y-scroll">
+        <section className="">
           <Draggable>
           {creatures
               .sort((a, b) => a.order - b.order)
@@ -88,7 +136,7 @@ function App() {
               ))}
           </Draggable>
         </section>
-        <section className="border border-blue-500 p-4">
+        <section className="p-4 bg-white">
           <h2>Cheat sheets</h2>
         </section>
       </main>

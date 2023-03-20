@@ -71,9 +71,9 @@ function Bonus(props) {
 
 
   if (props.value > 10) {
-    return <span className="block mx-auto w-8 text-sm bg-blue-900 text-white rounded-lg font-bold">+{bonus}</span>
+    return <span className="block mx-auto w-8 text-sm bg-blue-100 rounded-lg font-bold">+{bonus}</span>
   } else if (props.value < 10) {
-    return <span className="block mx-auto w-8 text-sm bg-red-800 text-white rounded-lg font-bold">{bonus}</span>
+    return <span className="block mx-auto w-8 text-sm bg-gray-200 rounded-lg font-bold">{bonus}</span>
   } else if (bonus === 10) {
     return null
   } else {
