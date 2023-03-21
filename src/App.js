@@ -2,13 +2,28 @@ import * as React from "react";
 import { useState } from "react";
 import './App.css';
 import logo from './dnd-logo.svg';
-import data from './data/creatures';
+import multi from './data/multi';
 import { Reorder } from "framer-motion";
+import Select from "react-select";
 import { Creature } from './components/Creature';
 
 export default function App() {
 
-  const [items, setItems] = useState(data);
+  const options = [
+    { label: "Goblin Ambush", value: 0 },
+    { label: "Goblin Hideout", value: 1 }
+  ];
+
+  const defaultSelected = options.find((opt) => 1);
+
+  const [selected, setSelected] = useState(defaultSelected);
+  const [items, setItems] = useState(multi[selected.value].creatures);
+
+  const onChange = (option) => {
+    setSelected(option);
+    setItems(multi[option.value].creatures);
+  }
+
 
   return (
     <div className="">
@@ -18,6 +33,9 @@ export default function App() {
       <main className="p-4 grid grid-cols-2 gap-8 pt-24 bg-gray-200 h-screen overflow-y-scroll">
         <section className="">
 
+
+          <Select className="mb-2" options={options} value={selected} onChange={onChange} />
+
           <Reorder.Group axis="y" onReorder={setItems} values={items}>
             {items.map((item) => (
               <Creature
@@ -26,6 +44,7 @@ export default function App() {
               />
             ))}
           </Reorder.Group>
+
         </section>
 
         <section className="p-4 bg-white">
