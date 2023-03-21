@@ -1,0 +1,36 @@
+const data = [
+  {
+    id: '1',
+    npc: false,
+    name: "Jellifer",
+    pc: "Alison",
+    level: 2,
+    hp: 23,
+    ac: 14,
+    pp: 13,
+    str: 14,
+    dex: 16,
+    const: 15,
+    int: 10,
+    wis: 13,
+    cha: 9,
+  },
+  {
+    id: '2',
+    npc: true,
+    name: "Josephine",
+    pc: "Alison",
+    level: 2,
+    hp: 23,
+    ac: 14,
+    pp: 13,
+    str: 14,
+    dex: 16,
+    const: 15,
+    int: 10,
+    wis: 13,
+    cha: 9,
+  },
+]
+
+export default data;
