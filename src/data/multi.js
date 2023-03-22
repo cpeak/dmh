@@ -67,23 +67,6 @@ const data = [
         wis: 8,
         cha: 5,
       },
-      {
-        id: '5',
-        npc: true,
-        name: "Goblin",
-        pc: "1",
-        level: 2,
-        hp: 13,
-        ac: 13,
-        pp: 9,
-        str: 10,
-        dex: 14,
-        const: 15,
-        int: 6,
-        wis: 8,
-        cha: 5,
-      },
-
     ],
   },
 
@@ -124,7 +107,7 @@ const data = [
         cha: 12,
       },
       {
-        id: '3',
+        id: '6',
         npc: true,
         name: "Skeleton",
         pc: "2",
@@ -140,7 +123,7 @@ const data = [
         cha: 5,
       },
       {
-        id: '4',
+        id: '7',
         npc: true,
         name: "Goblin",
         pc: "1",
@@ -156,7 +139,7 @@ const data = [
         cha: 5,
       },
       {
-        id: '5',
+        id: '8',
         npc: true,
         name: "Bugbear",
         pc: "1",
@@ -172,7 +155,7 @@ const data = [
         cha: 9,
       },
       {
-        id: '6',
+        id: '9',
         npc: true,
         name: "Goblin",
         pc: "1",
