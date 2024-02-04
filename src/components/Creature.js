@@ -22,9 +22,9 @@ export const Creature = ({item}: Props) => {
 
   return (
     <Reorder.Item value={item} id={item} style={{ boxShadow, y }}>
-    <section className={`border border-slate-300 font-sans bg-white mb-2 cursor-grab active:cursor-grabbing ${turn ? 'border-l-8 border-blue-500' : ''}`} onClick={()=> setTurn(!turn)}>
+    <section className={`border border-slate-300 font-sans bg-white mb-2 cursor-grab active:cursor-grabbing ${turn ? '' : ''}`} onClick={()=> setTurn(!turn)}>
         <header className={`${item.npc ? 'bg-red-900': 'bg-black'} py-1 px-2 flex justify-between gap-4 text-white text-xs font-medium`}>
-          <h2 className="font-bold">{item.name} ({item.pc})</h2>
+          <h2 className="font-bold text-lg">{item.name} ({item.pc}) - {item.race} {item.class}</h2>
           <p>Level {item.level}</p>
         </header>
         <main className="px-2 py-2 pb-3 flex justify-between">
@@ -68,6 +68,20 @@ export const Creature = ({item}: Props) => {
             <section className="w-12 text-center">
               <span className="font-bold text-slate-400">PP</span>
               <h3 className="text-3xl mb-2 font-black">{ item.pp }</h3>
+            </section>
+          </div>
+          <div className="flex gap-10">
+            <section className="">
+              <section className="flex gap-1 my-3">
+                <input type="checkbox" className="appearance-none rounded-full h-5 w-5 cursor-pointer bg-emerald-50 outline-none checked:bg-emerald-600" />
+                <input type="checkbox" className="appearance-none rounded-full h-5 w-5 cursor-pointer bg-emerald-50 outline-none checked:bg-emerald-600" />
+                <input type="checkbox" className="appearance-none rounded-full h-5 w-5 cursor-pointer bg-emerald-50 outline-none checked:bg-emerald-600" />
+              </section>
+              <section className="flex gap-1">
+                <input type="checkbox" className="appearance-none rounded-full h-5 w-5 cursor-pointer bg-red-50 outline-none checked:bg-red-600" />
+                <input type="checkbox" className="appearance-none rounded-full h-5 w-5 cursor-pointer bg-red-50 outline-none checked:bg-red-600" />
+                <input type="checkbox" className="appearance-none rounded-full h-5 w-5 cursor-pointer bg-red-50 outline-none checked:bg-red-600" />
+              </section>
             </section>
           </div>
           <div className="text-center w-20">
