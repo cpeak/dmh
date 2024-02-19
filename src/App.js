@@ -5,12 +5,12 @@ import logo from './dnd-logo.svg';
 import multi from './data/multi';
 import { Reorder } from "framer-motion";
 import Select from "react-select";
-import { Creature } from './components/Creature';
+import { Player } from './components/Player';
 
 export default function App() {
 
   const options = [
-    { label: "Goblin Ambush", value: 0 },
+    { label: "Ambush", value: 0 },
     { label: "Goblin Hideout", value: 1 }
   ];
 
@@ -30,15 +30,15 @@ export default function App() {
       <header className="fixed z-10 left-0 right-0 p-5 bg-black text-white">
         <img src={logo} className="w-20" alt='logo'/>
       </header>
-      <main className="p-4 grid grid-cols-2 gap-8 pt-24 bg-gray-200 h-screen overflow-y-scroll">
-        <section className="">
+      <main className="p-4 flex pt-24 gap-8 bg-gray-200 h-screen overflow-y-scroll bg-cover bg-[url('town.jpg')]">
+        <section className="w-8/12">
 
 
           <Select className="mb-2" options={options} value={selected} onChange={onChange} />
 
           <Reorder.Group axis="y" layoutScroll onReorder={setItems} values={items}>
             {items.map((item) => (
-              <Creature
+              <Player
                 key={item.id}
                 item={item}
               />
@@ -47,8 +47,7 @@ export default function App() {
 
         </section>
 
-        <section className="p-4 bg-white">
-          <h2>Cheat sheets</h2>
+        <section className="w-4/12">
         </section>
       </main>
     </div>
